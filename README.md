@@ -47,7 +47,7 @@ O modelo lê o histórico diário de cada fundo, calcula indicadores de performa
 Fonte: [Informe Diário de Fundos de Investimento](https://dados.cvm.gov.br/dataset/fi-doc-inf_diario), publicado pela CVM em dados abertos. O notebook baixa os arquivos direto por URL pública, sem login nem upload manual.
 
 - Período: dezembro de 2023 a junho de 2026, 30 meses, 630 pregões.
-- Volume: cerca de 200 MB após o filtro de tipo de fundo.
+- Volume: 16.503.894 registros
 - Escopo: fundos FIF (Fundo de Investimento Financeiro). O filtro exclui FII, FIP e FIDC, que têm regras e perfis de risco distintos.
 - Complemento: cadastro de fundos da CVM, usado para nome, situação, categoria ANBIMA e público-alvo.
 
