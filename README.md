@@ -55,7 +55,7 @@ O recorte temporal começa em dezembro de 2023 por dois motivos. A Resolução C
 
 <h2 align="center">Metodologia</h2>
 
-Tipo de problema: detecção de anomalias, aprendizado não supervisionado. Os dados públicos da CVM não trazem uma lista de fundos problemáticos, então o projeto não treina um classificador supervisionado.
+**Tipo de problema:** detecção de anomalias, aprendizado não supervisionado. Os dados públicos da CVM não trazem uma lista de fundos problemáticos, então o projeto não treina um classificador supervisionado.
 
 **Indicadores:** O pipeline transforma o painel diário em uma tabela de 10 indicadores por fundo: volatilidade, retorno total, max drawdown, sharpe, log do patrimônio, fluxo médio, proporção de dias com fluxo negativo, tendência de patrimônio, tendência de cotistas e log de cotistas. Fundos com menos de 500 observações no período saem da base, para garantir indicadores estatisticamente confiáveis.
 
