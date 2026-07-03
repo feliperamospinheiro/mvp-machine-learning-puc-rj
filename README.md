@@ -51,7 +51,9 @@ Fonte: [Informe Diário de Fundos de Investimento](https://dados.cvm.gov.br/data
 - Escopo: fundos FIF (Fundo de Investimento Financeiro). O filtro exclui FII, FIP e FIDC, que têm regras e perfis de risco distintos.
 - Complemento: cadastro de fundos da CVM, usado para nome, situação, categoria ANBIMA e público-alvo.
 
-O recorte temporal começa em dezembro de 2023 por dois motivos. A Resolução CVM 175 introduziu o campo que identifica o tipo de fundo só a partir dessa data. E o período evita o choque de juros de 2021 a 2022, quando a Selic subiu de 2% para 13,75% em 18 meses e distorceu o retorno de fundos de renda fixa por razões macroeconômicas, não operacionais.
+O recorte temporal começa em dezembro de 2023 por dois motivos:
+- A Resolução CVM 175 introduziu o campo que identifica o tipo de fundo só a partir dessa data.
+- O período evita o choque de juros de 2021 a 2022, quando a Selic subiu de 2% para 13,75% em 18 meses e distorceu o retorno de fundos de renda fixa por razões macroeconômicas e não operacionais.
 
 <h2 align="center">Metodologia</h2>
 
