@@ -57,11 +57,11 @@ O recorte temporal começa em dezembro de 2023 por dois motivos. A Resolução C
 
 Tipo de problema: detecção de anomalias, aprendizado não supervisionado. Os dados públicos da CVM não trazem uma lista de fundos problemáticos, então o projeto não treina um classificador supervisionado.
 
-**Indicadores.** O pipeline transforma o painel diário em uma tabela de 10 indicadores por fundo: volatilidade, retorno total, max drawdown, sharpe, log do patrimônio, fluxo médio, proporção de dias com fluxo negativo, tendência de patrimônio, tendência de cotistas e log de cotistas. Fundos com menos de 500 observações no período saem da base, para garantir indicadores estatisticamente confiáveis.
+**Indicadores:** O pipeline transforma o painel diário em uma tabela de 10 indicadores por fundo: volatilidade, retorno total, max drawdown, sharpe, log do patrimônio, fluxo médio, proporção de dias com fluxo negativo, tendência de patrimônio, tendência de cotistas e log de cotistas. Fundos com menos de 500 observações no período saem da base, para garantir indicadores estatisticamente confiáveis.
 
-**Pré-processamento.** Cada indicador é normalizado dentro do peer group do fundo, categoria ANBIMA cruzada com público-alvo, antes da padronização global. Sem essa etapa, um fundo de renda fixa com volatilidade de 1% ao ano recebe score alto ao lado de fundos de ações com 20% ao ano, mesmo sendo normal dentro da própria categoria.
+**Pré-processamento:** Cada indicador é normalizado dentro do peer group do fundo, categoria ANBIMA cruzada com público-alvo, antes da padronização global. Sem essa etapa, um fundo de renda fixa com volatilidade de 1% ao ano recebe score alto ao lado de fundos de ações com 20% ao ano, mesmo sendo normal dentro da própria categoria.
 
-**Modelos.** Três abordagens, comparadas lado a lado:
+**Modelos:** Três abordagens, comparadas lado a lado:
 
 | Modelo | Critério | Fundos sinalizados | Suporta novos dados |
 |---|---|---|---|
@@ -71,7 +71,7 @@ Tipo de problema: detecção de anomalias, aprendizado não supervisionado. Os d
 
 O Isolation Forest é o modelo final, pela capacidade de pontuar novos fundos via `predict()`. O LOF funciona como validação cruzada de metodologia.
 
-**Validação.** Sem rótulos, a validação usa duas estratégias. Primeiro, um holdout retroativo: fundos já classificados como "Em Liquidação" ou "Cancelado" no cadastro CVM ficam fora do treino e são pontuados depois, para checar se o modelo os classifica como mais anômalos que a média. Segundo, uma análise de sensibilidade do hiperparâmetro `contamination`, que mostra como o volume de fundos sinalizados varia com o limiar escolhido.
+**Validação:** Sem rótulos, a validação usa duas estratégias. Primeiro, um holdout retroativo: fundos já classificados como "Em Liquidação" ou "Cancelado" no cadastro CVM ficam fora do treino e são pontuados depois, para checar se o modelo os classifica como mais anômalos que a média. Segundo, uma análise de sensibilidade do hiperparâmetro `contamination`, que mostra como o volume de fundos sinalizados varia com o limiar escolhido.
 
 <h2 align="center">Resultados</h2>
 
