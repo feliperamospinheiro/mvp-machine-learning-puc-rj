@@ -42,6 +42,8 @@ O Brasil tem mais de 20 mil fundos de investimento ativos. Nenhuma equipe conseg
 
 O modelo lê o histórico diário de cada fundo, calcula indicadores de performance, fluxo e tendência, e sinaliza os fundos que mais destoam do padrão do mercado. O objetivo é gerar uma lista priorizada para due diligence, não substituir a análise humana.
 
+Link do projeto: [MVP_Deteccao_Anoalia_Fundos](https://colab.research.google.com/drive/119wF28wAZtBaVv6zMuJzkpyRGlZNUAGp#scrollTo=0tNfHPXSjTie)
+
 <h2 align="center">Dataset</h2>
 
 Fonte: [Informe Diário de Fundos de Investimento](https://dados.cvm.gov.br/dataset/fi-doc-inf_diario), publicado pela CVM em dados abertos. O notebook baixa os arquivos direto por URL pública, sem login nem upload manual.
